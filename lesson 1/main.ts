@@ -1,8 +1,25 @@
+// let a: number = 123;
+// let b: boolean = true;
+// let c: string = 'okten';
+//
+// // function foo(arg1: number, arg2: number): number {
+// //     return arg1 + arg2;
+// // }
+// //
+// // foo(1,'1asdsa');
+//
+// // let arr: any[] = [];
+// // arr.push(1);
+// // arr.push('1');
+// // arr.push(true);
+//
 
-class User  {
+
+class User {
     name: string;
     age: number;
     status: boolean;
+
 
     constructor(name: string, age: number, status: boolean) {
         this.name = name;
@@ -10,18 +27,18 @@ class User  {
         this.status = status;
     }
 
-    greeting?: (str: string) => string;
+    greeting() {
+        console.log('asdasd');
+    }
+
 }
 
+let user = new User('asd', 123, false);
+
+
 let users: User[] = [
-    {greeting: (str: string) => 'hello',name: 'vasya', age: 31, status: false},
-    {name: 'petya', age: 31, status: true},
-    {name: 'kolya', age: 32, status: false},
-    {name: 'olya', age: 35, status: false},
-    {name: 'max', age: 33, status: false},
-    {name: 'anya', age: 27, status: false},
-    {name: 'oleg', age: 29, status: false},
-    {name: 'andrey', age: 33, status: false},
-    {name: 'olya', age: 28, status: false},
-    {name: 'max', age: 32, status: false}
+    new User('adwqeqw', 123, true)
+
 ];
+
+console.log(users);
