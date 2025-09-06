@@ -1,1 +1,9 @@
-.idea
+/.idea/
+ /lesson1/*.js
+ /lesson2/*.js
+ /lesson3/*.js
+ /lesson2/async/asyncjs.js
+ /lesson2/dom/dom.js
+ /lesson2/intrefaces/main.js
+ /lesson2/type/main.js
+ /lesson3/classes/base/main.js
