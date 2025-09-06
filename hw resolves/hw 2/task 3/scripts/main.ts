@@ -1,5 +1,11 @@
+type Author = { name: string, age: number };
+type Book = { title: string,
+              pageCount: number,
+              genre: string,
+              authors: Author[]
+};
 
-let book1 =
+let book1: Book =
     {title: 'A',
      pageCount: 123,
      genre: 'AA',
@@ -14,7 +20,7 @@ let book1 =
          }
      ]
     }
-let book2 =
+let book2 : Book =
     {title: 'B',
         pageCount: 333,
         genre: 'BB',
@@ -29,7 +35,7 @@ let book2 =
             }
         ]
     }
-let book3 =
+let book3 : Book =
     {title: 'C',
         pageCount: 542,
         genre: 'CC',
