@@ -1,5 +1,5 @@
-let a = 9
-let b = 9
+let a : number = 9
+let b : number = 9
 if (a > b) {
     console.log(a);
 } else if (b > a) {

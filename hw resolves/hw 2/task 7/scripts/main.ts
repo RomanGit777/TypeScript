@@ -1,4 +1,4 @@
-let time = 46;
+let time : number = 46;
 if (time >= 0 && time < 15) {
     console.log(1);
 } else if (time >= 15 && time <= 30) {

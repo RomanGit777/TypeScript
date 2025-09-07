@@ -1,4 +1,4 @@
-let day = 21
+let day : number = 21;
 if (day >= 1 && day <=10){
     console.log(1);
 } else if (day > 10 && day <= 20){
