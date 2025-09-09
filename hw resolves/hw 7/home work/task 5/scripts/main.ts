@@ -1,15 +1,35 @@
 // #8abtVjRv
 // – Взяти масив (Client [] з попереднього завдання). Відсортувати його за кількістю товарів в полі order по зростанню.
 // (sort)
-function Client(id, name, surname, email, phone, order) {
-    this.id = id;
-    this.name = name;
-    this.surname = surname;
-    this.email = email;
-    this.phone = phone;
-    this.order = order;
-}
 
+class Client {
+    id: number;
+    name: string;
+    surname: string;
+    email: string;
+    phone: string;
+    products: Product[];
+
+    constructor(id: number, name: string, surname: string, email: string, phone: string, products: Product[]) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+        this.products = products;
+    }
+}
+class Product {
+    title: string;
+    price: number;
+
+
+    constructor(title: string, price: number) {
+        this.title = title;
+        this.price = price;
+
+    }
+}
 let clients = [
     new Client(1, 'vasya', 'olekseev', 'eprop@gmail.com', '+1213',
         [{title: 'tv', price: 13000},
@@ -37,4 +57,4 @@ let clients = [
     new Client(10, 'qwe', 'ert', 'fgf@gmail.com', '+2113', [{title: 'tv', price: 13000},
         {title: 'phone', price: 5000}])
 ];
-console.log(clients.sort((a, b) => a.order.length - b.order.length));
+console.log(clients.sort((a, b) => a.products.length - b.products.length));

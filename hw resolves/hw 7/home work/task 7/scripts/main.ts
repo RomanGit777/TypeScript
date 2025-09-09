@@ -7,8 +7,16 @@
 //     — changeYear (newValue) – змінює рік випуску на значення newValue
 //     — addDriver (driver) – приймає об’єкт, який “водій” з довільним набором полів, і додає його в поточний об’єкт car
 
+
 class Car{
-    constructor(model, producer, year, maxSpeed, engineVolume) {
+    model:string;
+    producer:string;
+    year:number;
+    maxSpeed:number;
+    engineVolume:number;
+    driver?: {name:string, age: number};
+
+    constructor(model: string, producer: string, year:number, maxSpeed:number, engineVolume:number) {
         this.model = model;
         this.producer = producer;
         this.year = year;
@@ -20,21 +28,21 @@ class Car{
         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
     };
 
-    info(){
+    info():void{
         for (const key in this) {
             console.log(key, this[key]);
         }
     };
 
-    increaseMaxSpeed(speedToAdd){
+    increaseMaxSpeed(speedToAdd: number):void{
         if(this.maxSpeed > 0) this.maxSpeed = this.maxSpeed + speedToAdd;
     };
 
-    changeYear(year){
+    changeYear(year: number):void{
         if(this.year > 1815) this.year = year;
     };
 
-    driver (driver){
+    addDriver (driver: {name: string, age: number}){
         if(driver) this.driver = driver;
     };
 }8
@@ -44,5 +52,5 @@ car.drive();
 car.info();
 car.increaseMaxSpeed(70);
 car.changeYear(2000);
-car.driver({name: 'rttr', age: 22});
+car.addDriver({name: 'rttr', age: 22});
 console.log(car);
