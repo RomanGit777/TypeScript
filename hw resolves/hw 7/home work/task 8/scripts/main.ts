@@ -5,15 +5,18 @@
 // ! Додатково, знайти необхідну попелюшку за допомогою функції масиву find та відповідного колбеку
 
 class Cinderella {
+    name: string;
+    age: number;
+    footSize: number;
 
-    constructor(name, age, footSize) {
+    constructor(name: string, age: number, footSize: number) {
         this.name = name;
         this.age = age;
         this.footSize = footSize;
     }
 }
 
-let cinderellas = [
+let cinderellas: Cinderella[] = [
     new Cinderella('qweq1', 20, 31),
     new Cinderella('qweq2', 21, 32),
     new Cinderella('qweq3', 22, 33),
@@ -28,11 +31,17 @@ let cinderellas = [
 
 class Prince {
 
-    constructor(name, age, shoe) {
+    name: string;
+    age: number;
+    shoe: number;
+    wife?: Cinderella;
+
+    constructor(name: string, age: number, shoe: number) {
         this.name = name;
         this.age = age;
         this.shoe = shoe;
     }
+
 }
 
 const prince = new Prince('tre', 25, 36);
@@ -45,5 +54,8 @@ for (const cinderella of cinderellas) {
 console.log(prince);
 
 const cinderellaMain = cinderellas.find(cinderella => cinderella.footSize === prince.shoe);
+
+if (cinderellaMain){
 prince.wife = cinderellaMain;
 console.log(prince);
+}
