@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px
+}
+
+.course-container {
+    border: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 450px;
+    padding: 20px;
+    background-color: #dcd4d4;
+    color: #302b2b;
+    transition: 1s;
+}
+
+.course-container:hover {
+    transform: scale(1.05);
+    transition: 1s;
+    cursor: pointer;
+}

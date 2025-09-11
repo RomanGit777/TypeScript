@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html{
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        input{
+            width: 200px;
+        }
+        #message{
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+
+<form name="f1">
+    <input type="number" name="age" placeholder="Enter your age">
+    <button type="submit">Check Age</button>
+</form>
+
+<div id="message"></div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

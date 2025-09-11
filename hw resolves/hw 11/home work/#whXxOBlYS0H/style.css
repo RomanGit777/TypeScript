@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.div-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid darkcyan;
+    margin: 25px 25px;
+    gap: 15px;
+}
+.img{
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+}
