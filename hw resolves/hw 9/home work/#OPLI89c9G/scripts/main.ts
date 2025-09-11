@@ -3,12 +3,13 @@
 //     ['Main','Products','About us','Contacts']
 // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
 
-let arr = ['Main','Products','About us','Contacts'];
+type StringType = string;
+let arr: StringType[] = ['Main','Products','About us','Contacts'];
 
-const menu = document.createElement('ul');
+const menu: HTMLUListElement = document.createElement('ul');
 menu.classList.add('menu');
 for (const item of arr) {
-    const li = document.createElement('li');
+    const li: HTMLLIElement = document.createElement('li');
     li.innerText = item;
     menu.appendChild(li);
 }

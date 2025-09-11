@@ -10,5 +10,5 @@ div.classList.add('wrap');
 div.classList.add('collapse');
 div.classList.add('alpha');
 div.classList.add('beta');
-const cloneNode = div.cloneNode(true);
+const cloneNode: Node = div.cloneNode(true) as HTMLElement;
 document.body.append(div, cloneNode);
