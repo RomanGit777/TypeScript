@@ -1,7 +1,8 @@
 // #2VaLt4vDczH
 // є сторінка, на якій є блок, в кому знаходиться цифра. Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
-let currentNumber = +localStorage.getItem('number');
+let currentNumber: number = +localStorage.getItem('number')!;
 currentNumber += 1;
-localStorage.setItem('number', currentNumber);
-let target = document.getElementById('target').innerText = currentNumber;
+localStorage.setItem('number', currentNumber.toString());
+const target = document.getElementById('target')!;
+target.innerText = currentNumber.toString();
