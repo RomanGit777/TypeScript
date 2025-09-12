@@ -1,7 +1,6 @@
 // #HmvAfRQM
 // – взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини. Відобразити всі поля кожної корзини.
-
-const cartsDiv = document.getElementById('carts');
+const cartsDiv: HTMLDivElement = document.getElementById('carts') as HTMLDivElement;
 
 fetch('https://dummyjson.com/carts')
     .then(value => value.json())
@@ -10,9 +9,9 @@ fetch('https://dummyjson.com/carts')
         console.log(carts);
 
         for (const cart of carts) {
-            const div = document.createElement('div');
+            const div: HTMLDivElement = document.createElement('div');
             div.classList.add('cart-container');
-            const divWithInfo = document.createElement('div');
+            const divWithInfo: HTMLDivElement = document.createElement('div');
             divWithInfo.innerText = `
               "total": ${cart.total},
               "discountedTotal": ${cart.discountedTotal},
@@ -20,10 +19,10 @@ fetch('https://dummyjson.com/carts')
               "totalProducts": ${cart.totalProducts},
               "totalQuantity": ${cart.totalQuantity}
             `
-            const ol = document.createElement('ol');
+            const ol: HTMLOListElement = document.createElement('ol');
             for (const product of cart.products) {
-                const li = document.createElement('li');
-                const info = document.createElement('p');
+                const li: HTMLLIElement = document.createElement('li');
+                const info: HTMLParagraphElement = document.createElement('p');
                 info.innerText = `
                   "id": ${product.id},
           "title": ${product.title},
@@ -33,7 +32,7 @@ fetch('https://dummyjson.com/carts')
           "discountPercentage": ${product.discountPercentage},
           "discountedTotal": ${product.discountedTotal},
                 `
-                const img = document.createElement('img');
+                const img: HTMLImageElement = document.createElement('img');
                 img.src = product.thumbnail;
 
                 li.append(img, info);
@@ -41,9 +40,7 @@ fetch('https://dummyjson.com/carts')
             }
 
             div.append(divWithInfo, ol);
-            cartsDiv.appendChild(div);
+            cartsDiv!.appendChild(div);
 
         }
-
-
     });
