@@ -87,3 +87,26 @@
 //        return this.arrayToStoreItems[this.arrayToStoreItems.length - 1];
 //     }
 // }
+
+// Write a fetch call that sends a POST request with JSON body { "name": "Alice" }
+// fetch("https://api.example.com/data", {
+//     method: "POST",
+//     headers: {
+//         "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({name: "Alice"})
+// })
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+
+//
+// async function getData (url: string) {
+//     try {
+//         const res = await fetch(url)
+//         const data = await res.json()
+//         console.log(data);
+//     } catch(err){
+//         console.log(err)
+//     }
+// }
+// getData("https://api.example.com/data").then((data) => console.log(data));
